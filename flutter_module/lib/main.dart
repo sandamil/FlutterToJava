@@ -30,7 +30,7 @@ Widget _widgetForRouter(String router) {
     default:
       return Center(
         child: Text(
-          "不清楚的router",
+          "router",
           textDirection: TextDirection.ltr,
         ),
       );
@@ -45,10 +45,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: '登录Demo',
+    return MaterialApp(
+      title: 'Demo',
       debugShowCheckedModeBanner: false,
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.lightBlue,
       ),
       home: LoginPage(),

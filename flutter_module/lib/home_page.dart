@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  static String tag = '首页';
+  static String tag = 'home-page';
+
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
 
-    final user = Hero(
+    const user = Hero(
       tag: 'hero',
       child: Padding(
         padding: EdgeInsets.all(20.0),
@@ -18,26 +20,25 @@ class HomePage extends StatelessWidget {
       ),
     );
 
-    final welcome = Padding(
+    const welcome = Padding(
       padding: EdgeInsets.all(8.0),
       child: Text(
-        '欢迎，kimihe',
-        style: new TextStyle(color: Colors.white, fontSize: 20.0),
+        'Bienvenido',
+        style: TextStyle(color: Colors.white, fontSize: 20.0),
       ),
     );
 
-    final info = Padding(
+    const info = Padding(
       padding: EdgeInsets.all(8.0),
       child: Text(
-        "Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。 Flutter可以与现有的代码一起工作。在全世界，Flutter正在被越来越多的开发者和组织使用，并且Flutter是完全免费、开源的。",
-        style: new TextStyle(color: Colors.white, fontSize: 20.0),
+        "Flutter es el marco de interfaz de usuario móvil de Google que puede crear rápidamente interfaces de usuario nativas de alta calidad en iOS y Android. Flutter puede funcionar con el código existente. En todo el mundo, cada vez más desarrolladores y organizaciones usan Flutter, y Flutter es completamente libre y de código abierto.",        style: TextStyle(color: Colors.white, fontSize: 20.0),
     ),
     );
 
     final body = Container(
       width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.all(28.0),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.all(28.0),
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
             Colors.green,
@@ -45,7 +46,7 @@ class HomePage extends StatelessWidget {
           ]
         )
       ),
-      child: Column(children: <Widget>[
+      child: Column(children: const <Widget>[
         user, welcome, info,
       ],),
     );

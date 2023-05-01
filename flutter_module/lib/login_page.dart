@@ -5,6 +5,8 @@ class LoginPage extends StatefulWidget {
 
   static String tag = 'login-page';
 
+  const LoginPage({super.key});
+
   @override
   _LoginPageState createState() => new _LoginPageState();
 }
@@ -25,10 +27,10 @@ class _LoginPageState extends State<LoginPage> {
     final email = TextFormField(
       keyboardType: TextInputType.emailAddress,
       autofocus: false,
-      initialValue: '113805738@qq.com',
+      initialValue: 'sandamil@gmail.com',
       decoration: InputDecoration(
         hintText: 'Email',
-        contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+        contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(32.0)
         )
@@ -37,11 +39,11 @@ class _LoginPageState extends State<LoginPage> {
 
     final password = TextFormField(
       autofocus: false,
-      initialValue: '请输入密码',
+      initialValue: 'password',
       obscureText: true,
       decoration: InputDecoration(
           hintText: 'Password',
-          contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+          contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(32.0)
           )
@@ -49,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     final loginButton = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: Material(
         borderRadius: BorderRadius.circular(30.0),
         shadowColor: Colors.lightBlueAccent.shade100,
@@ -61,13 +63,13 @@ class _LoginPageState extends State<LoginPage> {
             Navigator.of(context).pushNamed(HomePage.tag);
           },
           color: Colors.green,
-          child: Text('登 录', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+          child: const Text('login', style: TextStyle(color: Colors.white, fontSize: 20.0),),
         ),
       ),
     );
 
     final forgotLabel = ElevatedButton(
-      child: Text('忘记密码?', style: TextStyle(color: Colors.black54, fontSize: 18.0),),
+      child: const Text('pass olvidado?', style: TextStyle(color: Colors.black54, fontSize: 18.0),),
       onPressed: () {},
     );
 
@@ -76,14 +78,14 @@ class _LoginPageState extends State<LoginPage> {
       body: Center(
         child: ListView(
           shrinkWrap: true,
-          padding: EdgeInsets.only(left: 24.0, right: 24.0),
+          padding: const EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
             logo,
-            SizedBox(height: 48.0,),
+            const SizedBox(height: 48.0,),
             email,
-            SizedBox(height: 8.0,),
+            const SizedBox(height: 8.0,),
             password,
-            SizedBox(height: 24.0,),
+            const SizedBox(height: 24.0,),
             loginButton,
             forgotLabel
           ],

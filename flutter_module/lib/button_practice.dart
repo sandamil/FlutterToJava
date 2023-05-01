@@ -9,7 +9,7 @@ class ButtonPractice extends StatelessWidget {
       title: "Button practice",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("button practice"),
+          title: const Text("button practice"),
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -17,8 +17,8 @@ class ButtonPractice extends StatelessWidget {
             ElevatedButton(
               // textColor: Colors.greenAccent,
               // color: Colors.amber,
-              child: Text(
-                  "这个是RaisedButton" /*,style: TextStyle(
+              child: const Text(
+                  "ElevatedButton" /*,style: TextStyle(
                 color: Colors.greenAccent,
               ),*/
                   ),
@@ -28,43 +28,47 @@ class ButtonPractice extends StatelessWidget {
               color: Colors.blue,
 //              width: 200,
 //              height: 50,
-              constraints: BoxConstraints.expand(width: 200, height: 50),
+              constraints: const BoxConstraints.expand(width: 200, height: 50),
               child: ElevatedButton(
                 onPressed: () {  },
-                child: Text("hahahah"),
+                child: const Text("ElevatedButton BoxConstraints"),
               ),
             ),
             FloatingActionButton(
               child: const Icon(Icons.accessibility),
-              tooltip: '长按之后提示的文字',
-              //长按提示的文字
+              tooltip: 'FloatingActionButton',
               foregroundColor: Colors.red,
-              //设置显示图标或者文本的颜色//前提是子child没有设置
               backgroundColor: Colors.blueAccent,
-              //设置按钮的背景色
 //          heroTag: ,//类似于一个标识
               elevation: 10.0,
-              //设置阴影
               highlightElevation: 50.0,
-//              shape: const CircleBorder(),
+             // shape: const CircleBorder(),
 //              shape: StadiumBorder(side: BorderSide(width: 2, style: BorderStyle.solid, color: Color(0xFF00FFFF))),
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   side: BorderSide(
                       color: Color(0xFFFFFFFF),
                       style: BorderStyle.solid,
                       width: 2)),
-//          isExtended: true,
+         isExtended: true,
               onPressed: () {
                 print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
               },
             ),
-            ElevatedButton(
-              child: Text("OutlineButton"),
+            OutlinedButton(
+              child: const Text("OutlineButton"),
               onPressed: () => {},
             ),
-            ElevatedButton(
-              child: Text("FlatButton"),
+            TextButton(
+              child: const Text("TextButton"),
+              onPressed: () => {},
+            ),
+            FilledButton(
+              child: const Text("FilledButton"),
+              onPressed: () => {},
+            ),
+          CloseButton(
+              color: Colors.orangeAccent,
               onPressed: () => {},
             ),
           ],

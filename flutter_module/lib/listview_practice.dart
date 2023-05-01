@@ -25,7 +25,7 @@ class _ListView extends StatelessWidget{
       body: ListView(
         padding: const EdgeInsets.all(10.0),
         itemExtent: 30.0,
-        children: <Widget>[
+        children: const <Widget>[
           Text("A"),
           Text("B"),
           Text("C"),
